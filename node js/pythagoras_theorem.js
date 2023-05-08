@@ -22,12 +22,12 @@ const pythagoras_theorem = {
     if(!numbers)
     return console.error("Donner uniquement les valeurs des deux cotés. Exemple : 3 4");
     
-    console.log(`La longueur du troisième côté est : ${this.calcul(numbers[0], numbers[1])}`)
+    console.log(`La longueur du troisième côté est : ${this.calcul(parseFloat(numbers[0]), parseFloat(numbers[1]))}`)
 
   },
 
   calcul(firstValue, secondValue){
-    return Math.sqrt(firstValue*firstValue+secondValue*secondValue)
+    return Math.sqrt(firstValue**2+secondValue**2)
   }
 
 }
