@@ -26,8 +26,8 @@ parameter = {
   ]
 }
 
-console.clear()
-
+main()
+async function main(){
 try {
   //overlay.center([parameter.name+' - '+parameter.version], parameter.menuLength,'cadre')
 
@@ -40,15 +40,31 @@ try {
     textArray.push(text)
   }
   overlay.alignLeft(textArray, parameter.margin)
-  quote()
+  await quote()
 }
 //mutiplication_table.main();
 //pythagoras_theorem.main();
 //remarkable_identity.main()
 catch (error) { console.error(error) }
-
+}
 async function quote() {
-  let answer =  2//await rl.question('')
-  parameter.app[answer - 1].launcher
+  
+await rl.question('',async (answer)=>{
+    //can't execute the function in parameter.app
+    switch(answer){
+      case "1":  mutiplication_table.main();
+      break;
+      case "2" : pythagoras_theorem.main()
+      break;
+      case "3" : remarkable_identity.main()
+      break;
+      default : {
+        console.log("mauvaise entré")
+        quote()
+      }
+    }
+    
+  }); 
+  
 }
 
