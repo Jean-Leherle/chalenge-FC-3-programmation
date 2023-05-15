@@ -24,7 +24,6 @@ const remarkable_identity = {
     const a = parseFloat(numbers[0]);
     const b = parseFloat(numbers[1])
     const results = this.calcul(a, b)
-    console.log('test', results.addIdentity)
     console.log(`(${a} + ${b})² = ${a}² + 2 x ${a} x ${b} + ${b}² = ${results.addIdentity}`)
     console.log(`(${a} - ${b})² = ${a}² - 2 x ${a} x ${b} + ${b}² = ${results.substractIdentity}`)
     console.log(`(${a} + ${b})(${a} - ${b}) = ${a}² - ${b}² = ${results.addSubstractIdentity}`)

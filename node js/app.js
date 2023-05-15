@@ -48,9 +48,20 @@ try {
 catch (error) { console.error(error) }
 }
 async function quote() {
-  
-await rl.question('',async (answer)=>{
-    //can't execute the function in parameter.app
+  try {
+
+  }
+  catch(e){
+    console.error(e)
+  }
+  await rl.question('', async (answer) => {
+    if(isNaN(parseInt(answer))) return console.log(`erreur, "${answer}" n'est pas un nombre`)
+    
+    await parameter.app[parseInt(answer)-1].launcher
+  })
+/*await rl.question('',async (answer)=>{
+    
+
     switch(answer){
       case "1":  mutiplication_table.main();
       break;
@@ -64,7 +75,8 @@ await rl.question('',async (answer)=>{
       }
     }
     
-  }); 
-  
+  }
+  ); 
+  */
 }
 
