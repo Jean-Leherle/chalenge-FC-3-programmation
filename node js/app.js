@@ -54,10 +54,12 @@ async function quote() {
   catch(e){
     console.error(e)
   }
-  await rl.question('', async (answer) => {
+  await rl.question('', (answer) => {
     if(isNaN(parseInt(answer))) return console.log(`erreur, "${answer}" n'est pas un nombre`)
     
-    await parameter.app[parseInt(answer)-1].launcher
+    const app =  parameter.app[parseInt(answer)-1]
+    console.log(app)
+    app.launcher()
   })
 /*await rl.question('',async (answer)=>{
     

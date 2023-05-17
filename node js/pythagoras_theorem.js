@@ -10,6 +10,7 @@ const pythagoras_theorem = {
       const values = this.readAnswer(userAnswer);
       this.answer(values);
       rl.close()
+      
     })
   },
   readAnswer(answerAsString){
