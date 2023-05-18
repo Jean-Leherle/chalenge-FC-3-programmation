@@ -7,9 +7,9 @@ public abstract class MathQuote {
 
   public boolean quote(){
     try {
-      System.out.println(question);
+      System.out.println(this.question);
       Scanner scanner = new Scanner(System.in);
-      String brutAnswer = scanner.next();
+      String brutAnswer = scanner.nextLine();
       if(brutAnswer== "exit"){
         scanner.close();
         return true;
@@ -24,6 +24,7 @@ public abstract class MathQuote {
       return true;
     }catch(Exception exception){
       System.err.println("Erreur de fonctionnement");
+      System.err.println(exception);
       return false;
     }
   }
